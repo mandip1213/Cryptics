@@ -1,13 +1,61 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.25rem;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+input {
+    font-size: 1.25rem;
+    border: 2px solid grey;
+}
+
+.container:not(last-child) {
+    border-bottom: 3px solid #00aaff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem
+}
+
+.generation {
+    flex-direction: column;
+}
+
+.heading {
+    background-image: linear-gradient(to right, hsl(100, 100%, 50%), hsl(200, 100%, 50%), hsl(100, 100%, 50));
+    background-image: linear-gradient(to right, #55ff00, #00aaff, #55ff00);
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.all {
+    background-image: linear-gradient(to top right, #00ff80ad, #00aaffad, #55ff00ad);
+}
+
+body {
+    background-image: radial-gradient(circle, #16151642, #97999742, #f0f0ec42);
+    background-size: 20px 20px;
 }
