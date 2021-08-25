@@ -50,7 +50,7 @@ RSA algoritm is implemented in the following steps.
 
 	5. The private key `(d)` should be calculated such that ` d.e = 1 mod ϕ(n) `.    
 	Mathematically , `d` can be calculated using the formula :     
-	<div style="text-align:center"><code>d = (i * ϕ(n) + 1) / 2</code></div>    
+	<span> style="text-align:center"><code>d = (i * ϕ(n) + 1) / 2</code></span>    
 	where we increase the value of i till d comes out as integer.   
 	The pair `(d,n)` now serves as private key.       
 
@@ -112,7 +112,7 @@ Example: For the sake of calculation, we have taken two digit prime numbers.
 2. <h2 id="_encryption" > Encryption</h2>
 	Now the pubic key(e,n) is used for encryption.Given any text , we first convert the text into [`ASCII`](https://en.wikipedia.org/wiki/ASCII) and each ASCII code is encrypted using public key(e,n) as below:   
 	Given a plaintext P, represented as an ASCII , the ciphertext C is calculated as:   
-	<div style="text-align:center"><code>C = P<sup>e</sup> / n</code></div>
+	<span> style="text-align:center"><code>C = P<sup>e</sup> / n</code></span>
 	then the encrypted number C is converted into character.
 
 	```c
@@ -125,7 +125,7 @@ Example: For the sake of calculation, we have taken two digit prime numbers.
 3. <h2 id="_decryption" > Decryption</h2>
 	Now the private key(d,n) is used for decryption.Given the encrypted number , we first decrypt the number into equivalent [`ASCII`](https://en.wikipedia.org/wiki/ASCII) and then convert into equivalent character(which is the required character). 
 	Given a plaintext P, represented as an ASCII , the ciphertext C is calculated as:   
-	<div style="text-align:center"><code>C= P<sup>d</sup> / n</code></div>
+	<span style="text-align:center"><code>C= P<sup>d</sup> / n</code></span>
 	then the encrypted number C is converted into character.
 	
 
@@ -137,7 +137,7 @@ Example: For the sake of calculation, we have taken two digit prime numbers.
 
 
 ![RSA](https://sectigostore.com/blog/wp-content/uploads/2020/06/how-rsa-works.png)
-<p style="text-align:center" class="image-text" > 🔴 RSA in a nutshell </p>
+<span> style="text-align:center" class="image-text" > 🔴 RSA in a nutshell </span>
 
 
 ## Where Are RSA Encryption Algorithms Used?
@@ -151,7 +151,7 @@ Example: For the sake of calculation, we have taken two digit prime numbers.
 
 
 <img src="https://i.ibb.co/9spnzng/kjhf.png" alt="kjhf" border="0">
-<p style="text-align:center" class="image-text" > 🔴 RSA is used in SSL </p>
+<span> style="text-align:center" class="image-text" > 🔴 RSA is used in SSL </span>
 
 ## Advantages 
 1. RSA is so secure and strong  that A compiuter took almost [4 hours](https://en.wikipedia.org/wiki/RSA_numbers##RSA-100) to factorize the number I previously asked you to facorize [see here]() .

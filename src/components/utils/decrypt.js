@@ -2,7 +2,6 @@
 
 
 const decrypt = (encrypted, d, n) => {
-	console.log(encrypted)
 	const decryptedArr = encrypted.split(",").map(number => {
 		let decrypted = 1;
 		for (let iteration = 1; iteration <= d; iteration++) {

@@ -8,7 +8,6 @@ import personalData from './data';
 
 const CardComp = ({ item: { name, media, image } }) => {
 
-	console.log(name)
 	return (<>
 		<div className="card card-hover">
 

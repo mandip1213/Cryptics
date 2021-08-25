@@ -1,7 +1,7 @@
 import React from 'react';
 import Encryption from './Encryption';
 import Decryption from './Decryption';
-import useCryptContext, { CryptProvider } from './Cryptioncontext';
+import { CryptProvider } from './Cryptioncontext';
 import Generation from './Generation';
 import "./Cryption.css";
 

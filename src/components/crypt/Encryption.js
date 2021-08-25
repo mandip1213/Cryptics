@@ -5,10 +5,13 @@ import useEncryption from '../utils/encrypt';
 const Encryption = () => {
 	const [inputText, setInputText] = useState("Hi")
 	const { publicKey, updateEncryptedText, product } = useCryptContext()
-	const { encryptedAscii, encryptedNumber } = useEncryption(inputText, publicKey, product)
+	const { encryptedNumber } = useEncryption(inputText, publicKey, product)
 	useEffect(() => {
 		updateEncryptedText(encryptedNumber)
+		/*eslint-disable */
 	}, [encryptedNumber, publicKey])
+	/*eslint-enable */
+
 
 
 	const handleChange = ({ target: { value } }) => {

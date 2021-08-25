@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Cryption from './components/crypt/Cryption';
-import MarkdownComp from './components/markdown/Markdown';
-import Navbar from './components/DocNavbar/Navbar';
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Hero from './components/hero/Hero';
 
 import Card from './components/card/Card';

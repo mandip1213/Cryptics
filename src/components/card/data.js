@@ -23,7 +23,7 @@ const personalData = [
 		id: 2,
 
 		media: {
-			linkedin: "https://www.linkedin.com/in/aavash-chhetri-319977204/",
+			facebook: "https://www.facebook.com/profile.php?id=100007365211859",
 			github: "https://github.com/Amrit99999",
 		},
 		image: amrit || src

@@ -41,7 +41,6 @@ function generateKeys(p1, p2) {
 
     if (d === e) {
         //to prevent same value of public and private keys
-        console.log("same");
         const tempKeys = generateKeys(p1, p2)
         d = tempKeys.d
         e = tempKeys.e

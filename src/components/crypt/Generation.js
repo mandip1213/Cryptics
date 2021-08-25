@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useGenerateKeys } from '../utils/generate';
-import useCryptContext, { UPDATE_KEYS } from './Cryptioncontext';
+import useCryptContext from './Cryptioncontext';
 import showOffImage from "../images/encrypt.jpg"
 
 const Generation = () => {
@@ -11,7 +11,10 @@ const Generation = () => {
 
 	useEffect(() => {
 		updateKeys(publicKey, privateKey, product)
+		/*eslint-disable */
 	}, [publicKey, privateKey, product])
+	/*eslint-enable */
+
 
 
 	const handleChange = e => {

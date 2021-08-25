@@ -25,7 +25,7 @@ const MarkdownComp = () => {
 	if (!markdownText) return <div>Loading</div>;
 	return (<>
 		<div className="markdown-body">
-			<img src={HeroImage} alt="Encryption Image" className="markdown-hero " />
+			<img src={HeroImage} alt="markdown_hero_image" className="markdown-hero " />
 			<Markdown
 				options={{
 					overrides: {
@@ -43,14 +43,12 @@ const MarkdownComp = () => {
 }
 
 function Image(props) {
-	// console.log(children)
 	return (<>
-		<img {...props} />
+		<img alt="markdown image" {...props} />
 	</>)
 }
 
 function PreHighlighter({ children, ...props }) {
-	console.log(children.props.children)
 	return (<>
 
 		<SyntaxHighlighter language="c" style={colorStyle}>
