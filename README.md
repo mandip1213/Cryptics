@@ -1,2 +1,2 @@
 
-[link] to the site (https://cryptics.netlify.app/)
+[link](https://cryptics.netlify.app/)  to the site 
