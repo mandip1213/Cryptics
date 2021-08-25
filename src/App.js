@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Cryption from './components/crypt/Cryption';
+import MarkdownComp from './components/markdown/Markdown';
+import Navbar from './components/DocNavbar/Navbar';
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import Hero from './components/hero/Hero';
+
+import Card from './components/card/Card';
+import Documentation from './components/documentation/Documentation';
 
 
 const App = () => {
 
   return (<>
-    <div className="heading">Cryptics </div>
-    <div className="all">
-      <Cryption />
-    </div>
+    <Router>
+      <Switch>
+
+        <Route exact path="/">
+          <>
+            <Hero />
+            <Cryption />
+            <Card />
+          </>
+        </Route>
+
+        <Route exact path="/docs"><Documentation /></Route>
+      </Switch>
+    </Router>
+
+
+
+
   </>);
 }
 
+
 export default App
+
+

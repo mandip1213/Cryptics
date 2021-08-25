@@ -3,25 +3,24 @@ import Encryption from './Encryption';
 import Decryption from './Decryption';
 import useCryptContext, { CryptProvider } from './Cryptioncontext';
 import Generation from './Generation';
+import "./Cryption.css";
 
 
 const CryptionComponent = () => {
 	return (<>
-		<div className="container generation">
-			<h3> Key Generation</h3>
-			<Generation />
-		</div>
-		<div className="container encryption">
-			<h3> Encryption</h3>
-			<Encryption />
-		</div>
-		<div className="container decryption">
-			<h3> Decryption</h3>
-			<Decryption />
-		</div>
+		<div id="cryption-container" className="cryption-wrapper">
+			<div className="cryption-main-container">
+				<Generation />
+				<div className="cryption-container">
+					<Encryption />
+					<Decryption />
 
+				</div>
+			</div>
+		</div>
 	</>)
 }
+
 
 const Cryption = () => <CryptProvider><CryptionComponent /></CryptProvider> /* context provider*/
 

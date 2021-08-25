@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+.docs-container {
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 0.5rem;
+    background-color: rgb(22, 21, 21);
+    color: gainsboro;
+    --text-color: gainsboro;
+}
+
+.docs-wrapper {
+    position: relative;
+    margin-top: 1rem;
+}
+
+
+/* markdown quote  */
+
+
+/* css for markdown  */
+
+.markdown-hero:before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    z-index: 2;
+}
+
+.markdown-hero,
+.markdown-image {
+    width: 100%;
+    position: relative;
+}
+
+.markdown-image {
+    outline: 2px solid black;
+    ;
+}
+
+.markdown-body {
+    width: 800px;
+    margin-left: 275px;
+    letter-spacing: 0.5px;
+    word-spacing: 65;
+    padding: 0rem 1rem;
+}
+
+
+/* css for navbar  */
+
+.navbar {
+    position: fixed;
+    min-width: 250px;
+    top: 5.5rem;
+    max-width: 235px;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    width: inherit;
+}
+
+
+/* docs quote */
+
+.docs-quote {
+    padding: 1rem 6rem;
+    font-size: 1.5rem;
+    /* background: url("../images/encryptbg.jpg"); */
+    /* 197 47% */
+    background: linear-gradient(to right, hsl(197, 100%, 35%), white, hsl(197, 100%, 35%), white, hsl(197, 100%, 35%), white, hsl(197, 100%, 35%), white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 3px;
+    transform: scale(1, 1.5);
+    color: transparent;
+    font-family: 'Modak', cursive;
+    text-align: center;
+}
+
+.docs-quote__image {
+    color: white;
+    width: 20px;
+}
+
+.docs-quote__image:first-child {
+    margin-right: 1rem;
+}
+
+.docs-quote__image:last-child {
+    margin-left: 1rem;
+}
+
+@media screen and (max-width:1200px) {
+    .markdown-body {
+        width: auto;
+    }
+    .docs-quote {
+        padding: 3rem;
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .markdown-body {
+        margin: auto;
+        width: 90vw;
+    }
+    .navbar {
+        display: none;
+    }
+    .docs-quote {
+        padding: 1rem;
+    }
+}

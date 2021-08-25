@@ -22,7 +22,7 @@ function generateKeys(p1, p2) {
         if (loop > +phiFunction) break;
     }
     if (possibleE.length === 0) { return ({ error: ` Keys cannot be generated with given numbers ${p1} and ${p2}` }) }
-    const e = possibleE[Math.floor(Math.random() * possibleE.length)]
+    let e = possibleE[Math.floor(Math.random() * possibleE.length)]
     // const e = 11
     for (let i = 1; ; i++) {
         d = (phiFunction * i + 1) / e;
@@ -31,8 +31,15 @@ function generateKeys(p1, p2) {
             break;
         }
     }
-    return ({ d, e })
 
+    if (d === e) {
+        //to prevent same value of public and private keys
+        console.log("same");
+        const tempKeys = generateKeys(p1, p2)
+        d = tempKeys.d
+        e = tempKeys.e
+    }
+    return ({ d, e })
 }
 
 export const useGenerateKeys = (p1, p2) => {
@@ -40,7 +47,11 @@ export const useGenerateKeys = (p1, p2) => {
     const [keys, setKeys] = useState({ publicKey: 1, privateKey: 1 })
 
     useEffect(() => {
+
         ; (() => {
+            if (p1 < 4 || p2 < 4) {
+                return setError("Please enter number greater than 3")
+            }
             const keys = generateKeys(p1, p2)
             if (keys.error) return setError(keys.error);
             setError("")
