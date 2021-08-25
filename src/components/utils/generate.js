@@ -5,6 +5,13 @@ const checkGcd = (e, phiFunction) => {
         if (e % i === 0 && phiFunction % i === 0) return (i === 1 ? 1 : 0);
     }
 }
+export const isPrime = (num) => {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
 function generateKeys(p1, p2) {
     if (!isPrime(p1) || !isPrime(p2)) {
         return ({ error: "Please enter prime number" })
@@ -44,6 +51,7 @@ function generateKeys(p1, p2) {
 
 export const useGenerateKeys = (p1, p2) => {
     const [error, setError] = useState("")
+    const [product, setproduct] = useState(1)
     const [keys, setKeys] = useState({ publicKey: 1, privateKey: 1 })
 
     useEffect(() => {
@@ -56,19 +64,14 @@ export const useGenerateKeys = (p1, p2) => {
             if (keys.error) return setError(keys.error);
             setError("")
             setKeys({ publicKey: keys.e, privateKey: keys.d })
+            setproduct(p1 * p2)
         })();
 
     }, [p1, p2])
 
 
-    return { keys, product: p1 * p2, error }
+    return { keys, product, error }
 
-}
-export const isPrime = (num) => {
-    for (let i = 2; i < num; i++) {
-        if (num % i === 0) return false;
-    }
-    return true;
 }
 
 

@@ -171,8 +171,17 @@
 
 .generation__info.error {
     color: red;
-    border-radius: 5px;
-    border-color: red;
+    /* border-radius: 5px; */
+}
+
+
+/* decryption */
+
+.decryption__error {
+    text-align: center;
+    border: 2px solid rgb(179, 38, 38);
+    color: rgb(190, 42, 42);
+    background-color: rgba(223, 222, 222, 0.877);
 }
 
 .decryption__decrypted-text code:empty {

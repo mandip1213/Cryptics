@@ -3,7 +3,7 @@ import useCryptContext from './Cryptioncontext';
 import useEncryption from '../utils/encrypt';
 
 const Encryption = () => {
-	const [inputText, setInputText] = useState("")
+	const [inputText, setInputText] = useState("Hi")
 	const { publicKey, updateEncryptedText, product } = useCryptContext()
 	const { encryptedAscii, encryptedNumber } = useEncryption(inputText, publicKey, product)
 	useEffect(() => {

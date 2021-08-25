@@ -1011,3 +1011,10 @@
     margin: 0 .2em .25em -1.6em;
     vertical-align: middle;
 }
+
+@media screen and (max-width:600px) {
+    .markdown-body ol,
+    .markdown-body ul {
+        padding-left: 10px;
+    }
+}
