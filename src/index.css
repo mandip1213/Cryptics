@@ -45,7 +45,18 @@ a {
 
 
 /* default end  */
-
+.cryption-container{
+    color:#ffffffa3;
+}
+.generation__info{
+    color:#00f;
+}
+.error.generation__info{
+/*     color:red */
+}
+span.emergency_class{
+    cursor:pointer;
+}
 
 /* css for navbar  */
 
