@@ -23,6 +23,18 @@
     inset: 0;
 }
 
+.source__link {
+    z-index: 100;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+}
+
+.source__link>img {
+    width: 35px;
+    aspect-ratio: 1/1;
+}
+
 .hero__logo-image {
     width: 200px;
     height: 200px;

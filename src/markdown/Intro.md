@@ -112,7 +112,7 @@ Example: For the sake of calculation, we have taken two digit prime numbers.
 2. <h2 id="_encryption" > Encryption</h2>
 	Now the pubic key(e,n) is used for encryption.Given any text , we first convert the text into [`ASCII`](https://en.wikipedia.org/wiki/ASCII) and each ASCII code is encrypted using public key(e,n) as below:   
 	Given a plaintext P, represented as an ASCII , the ciphertext C is calculated as:   
-	<span> style="text-align:center"><code>C = P<sup>e</sup> / n</code></span>
+	<span style="text-align:center"><code>C = P<sup>e</sup> / n</code></span>
 	then the encrypted number C is converted into character.
 
 	```c

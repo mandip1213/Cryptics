@@ -2,11 +2,15 @@ import React from 'react';
 import logo from "../images/logo.png";
 import "./Hero.css";
 import { Link } from 'react-router-dom';
-import detailsIcon from "../images/details.svg"
+import detailsIcon from "../images/details.svg";
+import github from "../images/github.png"
 
 const Hero = () => {
 	return (<>
 
+		<a href="https://github.com/A-atmos/RSAinC" className="source__link" title="   source code   " target="_blank">
+			<img src={github} alt="source_link" />
+		</a>
 		<div className="hero">
 			<div className="hero__header">
 				<img src={logo} alt="cryptics logo" className="hero__logo-image" />
