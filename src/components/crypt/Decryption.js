@@ -64,7 +64,8 @@ const Decryption = () => {
 
 				<span
 					type="none"
-					onClick={() => { setIsReadOnly(prev => !prev) }}>change</span>
+className="emergency__class"
+					onClick={() => { setIsReadOnly(prev => !prev) }}>edit</span>
 			</form>
 			{isReadOnly ? <><div className="decryption__product">product: <code>{product}</code> </div>
 				<div className="decryption__private-key">Private Key : <code>{privateKey}</code> </div>
